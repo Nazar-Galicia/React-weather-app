@@ -1,5 +1,4 @@
 import {memo, useContext} from "react";
-import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/WeatherHighlightCardBase.jsx";
 import './WeatherHighlightsList.css'
 import {WeatherContext} from "@/context/weatherContext.jsx";
 import WindCard from "@/components/WindCard/WindCard.jsx";

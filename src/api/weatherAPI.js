@@ -1,6 +1,6 @@
 const API_KEY = 'fc92822eb54249f3a53141731261906'
 
-const URL = `http://api.weatherapi.com/v1`
+const URL = `https://api.weatherapi.com/v1`
 
 export const weatherAPI = {
     getCurrentWeatherData: (query) => {

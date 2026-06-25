@@ -1,6 +1,8 @@
 import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/WeatherHighlightCardBase.jsx";
 import './WindCard.css'
 import {memo} from "react";
+import WindIcon from '../../../public/icons/highlight-wind.png'
+import WindArrow from '../../../public/wind-arrow.png'
 
 const WindCard = (props) => {
     const {
@@ -12,7 +14,7 @@ const WindCard = (props) => {
     return (
         <WeatherHighlightCardBase
             title='Wind'
-            iconSrc='../../../public/icons/highlight-wind.png'
+            iconSrc={WindIcon}
         >
             <div className="wind-card">
                 <h2 className="wind-card__speed">
@@ -23,7 +25,7 @@ const WindCard = (props) => {
                 <div className="wind-card__direction">
                     <div className="wind-card__direction-icon">
                         <img
-                            src="../../../public/wind-arrow.png"
+                            src={WindArrow}
                             alt="Wind direction"
                             style={{
                                 transform: `rotate(${wind_degree}deg)`

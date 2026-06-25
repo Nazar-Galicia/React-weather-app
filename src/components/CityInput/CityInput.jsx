@@ -1,6 +1,7 @@
 import {useContext} from "react";
 import {WeatherContext} from "@/context/weatherContext.jsx";
 import './CityInput.css'
+import searchIcon from '../../../public/icons/search.png'
 
 const CityInput = (props) => {
     const {
@@ -10,7 +11,7 @@ const CityInput = (props) => {
 
     return (
         <fieldset className='weather-summary__field'>
-            <img className='weather-summary__field-icon' src="../../../public/icons/search.png" alt="search icon"/>
+            <img className='weather-summary__field-icon' src={searchIcon} alt="search icon"/>
             <input
                 className='weather-summary__field-input'
                 type="text"

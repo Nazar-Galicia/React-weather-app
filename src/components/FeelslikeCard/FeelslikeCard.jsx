@@ -2,6 +2,9 @@ import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/Weat
 import './FeelslikeCard.css'
 import {useContext} from "react";
 import {WeatherContext} from "@/context/weatherContext.jsx";
+import TempIcon from '../../../public/icons/highlight-temparature.png'
+import HotIcon from '../../../public/hot.png'
+import ColdIcon from '../../../public/cold.png'
 
 const FeelslikeCard = (props) => {
     const {
@@ -16,7 +19,7 @@ const FeelslikeCard = (props) => {
     return (
         <WeatherHighlightCardBase
             title='Feels like'
-            iconSrc='../../../public/icons/highlight-temparature.png'
+            iconSrc={TempIcon}
         >
             <div className="feels-card">
 
@@ -30,8 +33,8 @@ const FeelslikeCard = (props) => {
                         <img
                             src={
                                 feelslike > temp
-                                    ? "../../../public/hot.png"
-                                    : "../../../public/cold.png"
+                                    ? HotIcon
+                                    : ColdIcon
                             }
                             alt=""
                         />

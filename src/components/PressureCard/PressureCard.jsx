@@ -1,5 +1,6 @@
 import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/WeatherHighlightCardBase.jsx";
 import './PressureCard.css'
+import PressureIcon from '../../../public/icons/highlight-pressure.png'
 
 const PressureCard = (props) => {
     const {
@@ -16,7 +17,7 @@ const PressureCard = (props) => {
     return (
         <WeatherHighlightCardBase
             title='Pressure'
-            iconSrc='../../../public/icons/highlight-pressure.png'
+            iconSrc={PressureIcon}
         >
             <div className="pressure-card">
 

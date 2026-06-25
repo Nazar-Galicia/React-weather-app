@@ -2,6 +2,9 @@ import './WeatherSummary.css'
 import CityInput from "@/components/CityInput/CityInput.jsx";
 import {useContext} from "react";
 import {WeatherContext} from "@/context/weatherContext.jsx";
+import RainIcon from '../../../public/icons/rain.png'
+import WindIcon from '../../../public/icons/wind.png'
+import HumidityIcon from '../../../public/icons/humidity.png'
 
 const WeatherSummary = (props) => {
 
@@ -56,7 +59,7 @@ const WeatherSummary = (props) => {
             <p className='weather-summary__weather-info'>
                 <img
                     className='weather-summary__weather-info-icon'
-                    src="../../../public/icons/rain.png"
+                    src={RainIcon}
                     alt="rain chance"
                 />
                 Probability of precipitation: {chance_of_rain}%
@@ -65,7 +68,7 @@ const WeatherSummary = (props) => {
             <p className='weather-summary__weather-info'>
                 <img
                     className='weather-summary__weather-info-icon'
-                    src="../../../public/icons/wind.png"
+                    src={WindIcon}
                     alt="wind"
                 />
                 Wind: {wind_kph}km/h ({wind_dir})
@@ -74,7 +77,7 @@ const WeatherSummary = (props) => {
             <p className='weather-summary__weather-info'>
                 <img
                     className='weather-summary__weather-info-icon'
-                    src="../../../public/icons/humidity.png"
+                    src={HumidityIcon}
                     alt="humidity"
                 />
                 Humidity: {humidity}%

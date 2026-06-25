@@ -1,5 +1,6 @@
 import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/WeatherHighlightCardBase.jsx";
 import './HumidityCard.css'
+import HumidityIcon from '../../../public/icons/highlight-drop.png'
 
 const HumidityCard = (props) => {
     const {
@@ -9,7 +10,7 @@ const HumidityCard = (props) => {
     return (
         <WeatherHighlightCardBase
             title='Humidity'
-            iconSrc='../../../public/icons/highlight-drop.png'
+            iconSrc={HumidityIcon}
         >
             <div className="humidity-card">
 

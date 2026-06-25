@@ -1,5 +1,8 @@
 import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/WeatherHighlightCardBase.jsx";
 import './SunriseCard.css'
+import HighlightSunriseIcon from '../../../public/icons/highlight-sunrise.png'
+import SunriseIcon from '../../../public/sunrise.png'
+import SunsetIcon from '../../../public/sunset.png'
 
 const SunriseCard = (props) => {
     const {
@@ -10,13 +13,13 @@ const SunriseCard = (props) => {
     return (
         <WeatherHighlightCardBase
             title='Sunset and sunrise'
-            iconSrc='../../../public/icons/highlight-sunrise.png'
+            iconSrc={HighlightSunriseIcon}
         >
             <div className="sun-card">
 
                 <div className="sun-card__item">
                     <div className="sun-card__icon">
-                        <img src="../../../public/sunrise.png" alt="Sunrise" />
+                        <img src={SunriseIcon} alt="Sunrise" />
                     </div>
 
                     <div>
@@ -27,7 +30,7 @@ const SunriseCard = (props) => {
 
                 <div className="sun-card__item">
                     <div className="sun-card__icon">
-                        <img src="../../../public/sunset.png" alt="Sunset" />
+                        <img src={SunsetIcon} alt="Sunset" />
                     </div>
 
                     <div>

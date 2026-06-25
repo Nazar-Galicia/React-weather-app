@@ -2,6 +2,7 @@ import WeatherHighlightCardBase from "@/components/WeatherHighlightCardBase/Weat
 import './DewpointCard.css'
 import {useContext} from "react";
 import {WeatherContext} from "@/context/weatherContext.jsx";
+import HighlightDew from '../../../public/icons/highlight-dew.png'
 
 const DewpointCard = (props) => {
     const {
@@ -15,7 +16,7 @@ const DewpointCard = (props) => {
     return (
         <WeatherHighlightCardBase
             title='Dewpoint'
-            iconSrc='../../../public/icons/highlight-dew.png'
+            iconSrc={HighlightDew}
         >
             <div className="dew-card">
 
