@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: 400;
+}
+body {
+    margin: 0;
+    background: var(--background-color);
+    font-family: "Manrope", sans-serif;
+}
+#root {
+    height: 100%;
+}
+input, textarea, select, button {
+    border: none;
+    background-color: transparent;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+ul, ol, menu {
+    list-style: none;
+}
+fieldset {
+    width: fit-content;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,53 @@
+.dew-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.dew-card__value {
+    margin: 0;
+
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: var(--text-color);
+}
+
+.dew-card__value span {
+    margin-left: 4px;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: var(--secondary-color);
+}
+
+.dew-card__status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dew-card__status-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #EEF6FF;
+
+    font-size: 20px;
+}
+
+.dew-card__status span {
+    font-size: 17px;
+    font-weight: 600;
+
+    color: var(--text-color);
+}

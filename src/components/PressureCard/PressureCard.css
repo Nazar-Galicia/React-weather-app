@@ -1,0 +1,48 @@
+.pressure-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1;
+}
+
+.pressure-card__value {
+    margin: 0;
+
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: var(--text-color);
+}
+
+.pressure-card__value span {
+    margin-left: 4px;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: var(--secondary-color);
+}
+
+.pressure-card__status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pressure-card__status-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #22C55E;
+}
+
+.pressure-card__status span {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-color);
+}

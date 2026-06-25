@@ -1,0 +1,31 @@
+:root {
+    --background-color: #F5F6FA;
+    --surface-bg-color: white;
+
+    --card-highlight-bg: #FFFFFF;
+
+    --border-color: #ECEEF2;
+
+    --forecast-card-bg: #F8FAFC;
+
+    --text-color: #111827;
+    --secondary-color: #6B7280;
+
+    --input-bg: #F5F6FA;
+}
+
+[data-theme="dark"] {
+    --background-color: #0F172A;
+    --surface-bg-color: #1E293B;
+
+    --card-highlight-bg: #212d42;
+
+    --border-color: #334155;
+
+    --forecast-card-bg: #212d42;
+
+    --text-color: #F8FAFC;
+    --secondary-color:  #CBD5E1;
+
+    --input-bg: #1b2335;
+}

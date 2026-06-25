@@ -1,0 +1,18 @@
+.weather {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    gap: 32px;
+
+    padding: 21px;
+}
+@media (max-width: 950px) {
+    .weather {
+        flex-direction: column;
+    }
+}
+@media (max-width: 520px) {
+    .weather {
+        padding: 12px;
+    }
+}

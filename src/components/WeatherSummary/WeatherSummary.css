@@ -1,0 +1,175 @@
+@keyframes showWeather {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes show {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes showMobile {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.weather-summary__city-not-found {
+    margin: 50% 0 32px;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #6B7280;
+}
+.weather-summary {
+    animation: show 1s ease;
+    width: 400px;
+    min-height: calc(100vh - 48px);
+    padding: 32px;
+    background: var(--surface-bg-color);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    overflow: hidden;
+}
+
+/* ===================== SEARCH ===================== */
+
+/* ===================== WEATHER ICON ===================== */
+
+.weather-summary__weather-icon {
+    animation: showWeather 1s ease;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* ===================== TEMPERATURE ===================== */
+
+.weather-summary__temparature {
+    animation: showWeather 1s ease;
+    margin: 0;
+    text-align: center;
+
+    font-size: 92px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: var(--text-color);
+}
+
+.weather-summary__temparature span {
+    animation: showWeather 1s ease;
+    font-size: .42em;
+    vertical-align: top;
+}
+
+/* ===================== DATE ===================== */
+
+.weather-summary__date {
+    animation: showWeather 1s ease;
+    text-align: center;
+
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.weather-summary__date span {
+    animation: showWeather 1s ease;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* ===================== WEATHER INFO ===================== */
+
+.weather-summary__weather-info {
+    animation: showWeather 1s ease;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.weather-summary__weather-info-icon {
+    animation: showWeather 1s ease;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* ===================== CITY CARD ===================== */
+
+.weather-summary__city-card {
+    animation: showWeather 1s ease;
+    position: relative;
+
+    margin-top: auto;
+    margin-bottom: 0;
+
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+    border-radius: 24px;
+    transition: all 1s;
+}
+
+.weather-summary__city-card-image {
+    animation: showWeather 1s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weather-summary__city-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, .65),
+            rgba(0, 0, 0, .1)
+    );
+}
+
+.weather-summary__city-card-caption {
+    animation: showWeather 1s ease;
+    position: absolute;
+
+    left: 24px;
+    bottom: 24px;
+
+    z-index: 2;
+
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+@media (max-width: 950px) {
+    .weather-summary {
+        animation: showMobile 1s ease;
+        width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+.weather-main-info__highlights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.weather-main-info__highlights-title {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+}
