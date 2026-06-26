@@ -5,6 +5,7 @@ import {WeatherContext} from "@/context/weatherContext.jsx";
 import RainIcon from '../../../public/icons/rain.png'
 import WindIcon from '../../../public/icons/wind.png'
 import HumidityIcon from '../../../public/icons/humidity.png'
+import CitySearch from "@/components/CitySearch/CitySearch.jsx";
 
 const WeatherSummary = (props) => {
 
@@ -19,7 +20,7 @@ const WeatherSummary = (props) => {
     if (isError || Object.keys(weatherData).length === 0) {
         return (
             <div className='weather-summary'>
-                <CityInput />
+                <CitySearch />
                 <h2 className='weather-summary__city-not-found'>Search for city</h2>
             </div>
         )
@@ -48,7 +49,7 @@ const WeatherSummary = (props) => {
 
     return (
         <div className='weather-summary'>
-            <CityInput />
+            <CitySearch />
 
             <img className='weather-summary__weather-icon' src={condition.icon} alt="weather icon"/>
 

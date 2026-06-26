@@ -7,6 +7,7 @@ const CityInput = (props) => {
     const {
         cityQuery,
         setCityQuery,
+        setIsDropdownOpen,
     } = useContext(WeatherContext)
 
     return (
@@ -19,6 +20,14 @@ const CityInput = (props) => {
                 value={cityQuery}
                 onChange={(event) => {
                     setCityQuery(event.target.value)
+                }}
+                onBlur={() => {
+                    setTimeout(() => {
+                        setIsDropdownOpen(false)
+                    }, 100)
+                }}
+                onFocus={() => {
+                    setIsDropdownOpen(true)
                 }}
             />
         </fieldset>

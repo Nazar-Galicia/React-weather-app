@@ -17,6 +17,10 @@ const WeatherContextProvider = (props) => {
         cityImageSrc,
         unit,
         setUnit,
+        geocodeCities,
+        setSelectedCity,
+        isDropdownOpen,
+        setIsDropdownOpen,
     } = useWeather()
 
     const value = useMemo(() => {
@@ -29,6 +33,10 @@ const WeatherContextProvider = (props) => {
             cityImageSrc,
             unit,
             setUnit,
+            geocodeCities,
+            setSelectedCity,
+            isDropdownOpen,
+            setIsDropdownOpen,
         }
     }, [
         cityQuery,
@@ -39,6 +47,10 @@ const WeatherContextProvider = (props) => {
         cityImageSrc,
         unit,
         setUnit,
+        geocodeCities,
+        setSelectedCity,
+        isDropdownOpen,
+        setIsDropdownOpen,
     ])
 
     return (
