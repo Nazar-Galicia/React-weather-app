@@ -1,0 +1,177 @@
+.forecast-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 100;
+
+    transition:
+            opacity .3s ease,
+            visibility .3s ease;
+}
+
+.forecast-modal--active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.forecast-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: var(--modal-overlay);
+
+    backdrop-filter: blur(8px);
+}
+
+.forecast-modal__content {
+    position: relative;
+
+    width: min(700px, calc(100vw - 32px));
+
+    padding: 32px;
+
+    border-radius: 28px;
+
+    background: var(--modal-background);
+
+    box-shadow: var(--modal-shadow);
+
+    animation: modalShow .35s cubic-bezier(.22,1,.36,1);
+
+    z-index: 2;
+}
+
+.forecast-modal__close {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background: var(--modal-close-background);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: .2s;
+
+    color: var(--modal-close-color);
+}
+
+.forecast-modal__close:hover {
+    background: var(--modal-close-hover);
+}
+
+.forecast-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecast-modal__day {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    color: var(--modal-text);
+}
+
+.forecast-modal__date {
+    margin-top: 6px;
+
+    font-size: 18px;
+
+    color: var(--modal-secondary-text);
+}
+
+.forecast-modal__icon {
+    width: 100px;
+    height: 100px;
+}
+
+.forecast-modal__temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 28px 0 10px;
+}
+
+.forecast-modal__max {
+    font-size: 72px;
+    font-weight: 700;
+
+    color: var(--modal-text);
+}
+
+.forecast-modal__divider {
+    font-size: 42px;
+
+    color: var(--modal-muted-text);
+}
+
+.forecast-modal__min {
+    font-size: 42px;
+    font-weight: 500;
+
+    color: var(--modal-secondary-text);
+}
+
+.forecast-modal__condition {
+    margin: 0 0 32px;
+
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: var(--modal-secondary-text);
+}
+
+.forecast-modal__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.forecast-modal__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    background: var(--modal-card);
+}
+
+.forecast-modal__item span {
+    font-size: 16px;
+    color: var(--modal-text);
+}
+
+.forecast-modal__item strong {
+    font-size: 20px;
+    color: var(--modal-text);
+}

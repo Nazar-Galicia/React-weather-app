@@ -20,6 +20,23 @@
     --search-icon-background: #F3F4F6;
     --search-shadow: 0 16px 40px rgba(15, 23, 42, .08);
     --search-hover: #F8FAFC;
+
+    --modal-overlay: rgba(15, 23, 42, .45);
+
+    --modal-background: #FFFFFF;
+
+    --modal-text: #111827;
+    --modal-secondary-text: #6B7280;
+    --modal-muted-text: #9CA3AF;
+
+    --modal-card: #F8FAFC;
+    --modal-card-hover: #F3F4F6;
+
+    --modal-close-background: #F3F4F6;
+    --modal-close-hover: #E5E7EB;
+    --modal-close-color: #111827;
+
+    --modal-shadow: 0 24px 60px rgba(15, 23, 42, .18);
 }
 
 [data-theme="dark"] {
@@ -44,4 +61,21 @@
     --search-icon-background: #334155;
     --search-border: #334155;
     --search-hover: #293548;
+
+    --modal-overlay: rgba(0, 0, 0, .65);
+
+    --modal-background: #1E293B;
+
+    --modal-text: #F8FAFC;
+    --modal-secondary-text: #CBD5E1;
+    --modal-muted-text: #94A3B8;
+
+    --modal-card: #334155;
+    --modal-card-hover: #475569;
+
+    --modal-close-background: #334155;
+    --modal-close-hover: #475569;
+    --modal-close-color: #F8FAFC;
+
+    --modal-shadow: 0 24px 60px rgba(0, 0, 0, .45);
 }

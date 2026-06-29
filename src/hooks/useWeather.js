@@ -13,6 +13,7 @@ export const useWeather = () => {
     const [geocodeCities, setGeocodeCities] = useState([]);
     const [selectedCity, setSelectedCity] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [modalData, setModalData] = useState({});
     const [unit, setUnit] = useState("c");
     const locationString = useRef('')
 
@@ -77,46 +78,6 @@ export const useWeather = () => {
         }
     }, [selectedCity]);
 
-    // useEffect(() => {
-    //     if (!debouncedQuery) return;
-    //
-    //     geocodeAPI.getLocationCords(cityQuery).then((data) => {
-    //         console.log(data)
-    //
-    //         const lat = 0 || data[0]?.lat
-    //         const lon = 0 || data[0]?.lon
-    //         const address = data[0]?.address;
-    //
-    //         const cords = `${lat},${lon}`;
-    //
-    //         if (data.length !== 0) {
-    //             if (Object.hasOwn(address, 'city')) {
-    //                 locationString.current = `${address.country}, ${address.city}`;
-    //             } else if (Object.hasOwn(address, 'village')) {
-    //                 locationString.current = `${address.country}, ${address.village}`;
-    //             } else {
-    //                 locationString.current = address.country
-    //             }
-    //         }
-    //         weatherAPI.getForecastWeatherData(cords, 7).then((data) => {
-    //             console.log(data);
-    //             setWeatherData(data);
-    //             setIsError(false);
-    //         })
-    //             .catch(error => {
-    //                 setIsError(true);
-    //             })
-    //
-    //         if (locationString.current) {
-    //             cityImageAPI.getCityImage(locationString.current).then((data) => {
-    //                 console.log(data)
-    //
-    //                 setCityImageSrc(data.photos[0].src.landscape)
-    //             })
-    //         }
-    //     })
-    // }, [debouncedQuery]);
-
     useEffect(() => {
         if (isError) {
             toast.error("Location not found. Check the spelling.", {
@@ -124,8 +85,6 @@ export const useWeather = () => {
             });
         }
     }, [isError]);
-
-
 
     return {
         cityQuery,
@@ -140,5 +99,7 @@ export const useWeather = () => {
         setSelectedCity,
         isDropdownOpen,
         setIsDropdownOpen,
+        modalData,
+        setModalData,
     }
 }

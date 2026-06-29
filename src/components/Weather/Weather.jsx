@@ -2,8 +2,23 @@ import './Weather.css'
 import WeatherSummary from "@/components/WeatherSummary/WeatherSummary.jsx";
 import WeatherMainInfo from "@/components/WeatherMainInfo/WeatherMainInfo.jsx";
 import { Toaster } from "react-hot-toast";
+import WeekForecastModal from "@/components/WeekForekastModal/WeekForecastModal.jsx";
+import {useContext, useEffect} from "react";
+import {WeatherContext} from "@/context/weatherContext.jsx";
 
 const Weather = () => {
+    const {
+        modalData,
+    } = useContext(WeatherContext)
+
+    useEffect(() => {
+        if (Object.keys(modalData).length !== 0) {
+            document.body.classList.add('modal-active');
+        } else {
+            document.body.classList.remove('modal-active');
+        }
+    }, [modalData])
+
     return (
         <div className='weather'>
             <Toaster
@@ -26,6 +41,7 @@ const Weather = () => {
                 }}
             />
 
+            <WeekForecastModal />
             <WeatherSummary />
             <WeatherMainInfo />
         </div>

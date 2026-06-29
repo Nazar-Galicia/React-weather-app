@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import {memo, useContext} from "react";
 import {WeatherContext} from "@/context/weatherContext.jsx";
 import './CityInput.css'
 import searchIcon from '../../../public/icons/search.png'
@@ -34,4 +34,4 @@ const CityInput = (props) => {
     )
 }
 
-export default CityInput;
+export default memo(CityInput);

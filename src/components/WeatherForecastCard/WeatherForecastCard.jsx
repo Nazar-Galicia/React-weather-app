@@ -7,7 +7,8 @@ const WeatherForecastCard = (props) => {
         day='',
         condition,
         temp,
-        minTemp=''
+        minTemp='',
+        onClick=null,
     } = props;
 
     const dateTime = new Date(time.replace(" ", "T"));
@@ -20,7 +21,10 @@ const WeatherForecastCard = (props) => {
     const stringDay = dateDay.toLocaleDateString("en-US", {weekday: "long"})
 
     return (
-        <div className='weather-main-info__forecast-card'>
+        <div
+            className='weather-main-info__forecast-card'
+            onClick={onClick}
+        >
             <time className='weather-main-info__forecast-time'>{time ? stringTime : stringDay}</time>
             <img className='weather-main-info__forecast-icon' src={condition.icon} alt="forecast icon"/>
             <p className='weather-main-info__forecast-temp'>{temp}° <span>{minTemp ? `${minTemp}°` : ''}</span></p>

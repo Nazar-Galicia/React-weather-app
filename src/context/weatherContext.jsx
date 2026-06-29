@@ -21,6 +21,8 @@ const WeatherContextProvider = (props) => {
         setSelectedCity,
         isDropdownOpen,
         setIsDropdownOpen,
+        modalData,
+        setModalData,
     } = useWeather()
 
     const value = useMemo(() => {
@@ -37,6 +39,8 @@ const WeatherContextProvider = (props) => {
             setSelectedCity,
             isDropdownOpen,
             setIsDropdownOpen,
+            modalData,
+            setModalData,
         }
     }, [
         cityQuery,
@@ -51,6 +55,8 @@ const WeatherContextProvider = (props) => {
         setSelectedCity,
         isDropdownOpen,
         setIsDropdownOpen,
+        modalData,
+        setModalData,
     ])
 
     return (

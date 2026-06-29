@@ -5,7 +5,8 @@ import {WeatherContext} from "@/context/weatherContext.jsx";
 
 const WeatherForecastContainer = (props) => {
     const {
-        unit
+        unit,
+        setModalData,
     } = useContext(WeatherContext);
 
     const {
@@ -63,6 +64,9 @@ const WeatherForecastContainer = (props) => {
                                 temp={unit === 'c' ? day.maxtemp_c : day.maxtemp_f}
                                 condition={day.condition}
                                 minTemp={unit === 'c' ? day.mintemp_c : day.mintemp_f}
+                                onClick={() => {
+                                    setModalData({...day, date})
+                                }}
                             />
                         ))
                     }

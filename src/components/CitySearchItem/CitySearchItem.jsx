@@ -1,5 +1,6 @@
 import LocationIcon from '../../../public/location.png'
 import './CitySearchItem.css'
+import {memo} from "react";
 
 const CityInput = (props) => {
     const {
@@ -35,4 +36,4 @@ const CityInput = (props) => {
     )
 }
 
-export default CityInput;
+export default memo(CityInput);
