@@ -1,16 +1,135 @@
-# React + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern weather application built with **React** and **WeatherAPI**.  
+It provides current weather conditions, hourly forecasts, 7-day forecasts, detailed weather highlights, theme switching, and a clean responsive interface.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔍 Search for any city worldwide
+- 📍 City search with autocomplete
+- 🌡️ Switch between Celsius and Fahrenheit
+- 📅 Hourly weather forecast
+- 📆 7-day weather forecast
+- 📊 Detailed weather highlights:
+    - Wind
+    - Humidity
+    - Pressure
+    - Dew Point
+    - Feels Like
+    - Sunrise & Sunset
+- 🌙 Light / Dark theme
+- 🎨 Modern responsive UI
+- 🔔 Toast notifications for invalid locations
+- 📱 Responsive design
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+https://nazar-galicia.github.io/React-weather-app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies
+
+- React
+- JavaScript (ES6+)
+- CSS3
+- Vite
+- WeatherAPI
+- React Hot Toast
+
+---
+
+## 📸 Screenshots
+
+### Light Theme
+
+![Light Theme](./src/assets/screenshots/dark-theme.png)
+
+### Dark Theme
+
+![Dark Theme](./src/assets/screenshots/light-theme.png)
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/Nazar-Galicia/React-weather-app.git
+```
+
+Navigate to the project folder
+
+```bash
+cd weather-app
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── components/
+├── context/
+├── hooks/
+├── assets/
+└── App.jsx
+```
+
+---
+
+## 🌐 API
+
+This project uses the **WeatherAPI** service to fetch:
+
+- Current weather
+- Hourly forecast
+- 7-day forecast
+- Weather conditions
+- Astronomy data
+
+Documentation:
+
+https://www.weatherapi.com/docs/
+
+---
+
+## 🎯 Future Improvements
+
+- ⭐ Favorite cities
+- 📈 Temperature charts
+- 🌦️ Dynamic backgrounds based on weather
+- 🌍 Automatic geolocation
+- 🌬️ Air quality information
+- 🌙 Moon phase
+- UV index visualization
+
+---
+
+## 👤 Author
+
+Developed by **Nazar Galicia**
+
+GitHub:
+https://github.com/Nazar-Galicia
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
